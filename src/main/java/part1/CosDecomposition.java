@@ -2,16 +2,22 @@ package part1;
 
 public class CosDecomposition {
 
-    private Integer fact(Integer x){
-        int fc = 1;
-        for (int i = 0; i <= x; i++){
-            fc *= i;
-        }
-        return fc;
-    }
+    public double customCos(double x) {
+        double result = 1D;
+        double current = 1D;
+        double previous = 0;
+        final double ACCURACY = 1e-4D;
 
-    public Double customCos(Integer x) {
-        return Math.pow(-1, x - 1);
+        for (int i = 1; Math.abs(current - previous) > ACCURACY && i < 1000 ; i++) {
+            previous = current;
+            current *= ( x * x * -1 );
+            current /= ( (2 * i) * (2 * i - 1) );
+            result += current;
+        }
+
+        if (result > 1) return 1;
+        if (result < -1) return -1;
+        return result;
     }
 
 }
