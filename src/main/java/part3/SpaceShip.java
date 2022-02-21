@@ -21,7 +21,7 @@ public class SpaceShip implements Visiable, Movable{
 
     @Override
     public void howDisplayedOnScreen() {
-        System.out.println("Корабль");
+        System.out.println("Корабль отображается как корабль");
     }
 
     public void setStrength(int strength) {
