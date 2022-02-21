@@ -2,9 +2,9 @@ package part3;
 
 public class Human implements Sensibilityable{
 
-    private String name;
-    private int age;
-    private String status;
+    private final String name;
+    private final int age;
+    private final String status;
 
     public Human(String name, int age, String status) {
         this.name = name;

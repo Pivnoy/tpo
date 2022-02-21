@@ -24,7 +24,7 @@ public class CosDecomposition {
         accuracy = Double.parseDouble((String) properties.get("accuracy"));
     }
 
-    public double customCos(double x) {
+    public double customCos(double x) throws ArithmeticException{
         for (int i = 1; Math.abs(current - previous) > accuracy && i < 1000 ; i++) {
             previous = current;
             current = (current * (x * x * (- 1)))/ ( (2 * i) * (2 * i - 1) );
@@ -32,6 +32,9 @@ public class CosDecomposition {
         }
         if (result > 1) return 1;
         if (result < -1) return -1;
+        if (Double.isNaN(result) || Double.isInfinite(result)) {
+            throw new ArithmeticException("Error input number");
+        }
         return result;
     }
 
