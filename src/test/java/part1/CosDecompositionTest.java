@@ -19,7 +19,7 @@ class CosDecompositionTest {
 
     @BeforeEach
     void setCosDecomposition() throws IOException {
-        cosDecomposition = new CosDecomposition();
+        this.cosDecomposition = new CosDecomposition();
     }
 
     @ParameterizedTest

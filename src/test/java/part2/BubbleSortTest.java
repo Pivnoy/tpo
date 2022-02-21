@@ -20,7 +20,7 @@ class BubbleSortTest {
 
     @BeforeEach
     public void setBubbleSort() {
-        bubbleSort = new BubbleSort();
+        this.bubbleSort = new BubbleSort();
     }
 
     @ParameterizedTest(name = "Basic sort test")
@@ -33,7 +33,7 @@ class BubbleSortTest {
                 .mapToInt(Integer::parseInt)
                 .toArray();
         bubbleSort.bubbleSort(array);
-        assertArrayEquals(array, trueArray);
+        assertArrayEquals(trueArray, array);
     }
 
     @ParameterizedTest(name = "Null source test")
