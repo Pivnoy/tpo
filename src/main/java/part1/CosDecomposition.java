@@ -27,8 +27,7 @@ public class CosDecomposition {
     public double customCos(double x) {
         for (int i = 1; Math.abs(current - previous) > accuracy && i < 1000 ; i++) {
             previous = current;
-            current *= ( x * x * -1 );
-            current /= ( (2 * i) * (2 * i - 1) );
+            current = (current * (x * x * (- 1)))/ ( (2 * i) * (2 * i - 1) );
             result += current;
         }
         if (result > 1) return 1;
