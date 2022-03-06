@@ -13,7 +13,6 @@ import java.util.Arrays;
 import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName(value = "BubbleSort tests")
-@TestInstance(value = TestInstance.Lifecycle.PER_CLASS)
 class BubbleSortTest {
 
     private BubbleSort bubbleSort;

@@ -13,13 +13,12 @@ import java.util.Arrays;
 import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName(value = "Cos tests")
-@TestInstance(value = TestInstance.Lifecycle.PER_CLASS)
 class CosDecompositionTest {
 
     private CosDecomposition cosDecomposition;
 
     @BeforeEach
-    void setCosDecomposition() throws IOException {
+    void setup() throws IOException {
         this.cosDecomposition = new CosDecomposition();
     }
 
