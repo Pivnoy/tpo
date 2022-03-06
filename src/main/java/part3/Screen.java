@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Screen {
 
-    private int width;
-    private int height;
+    private final int width;
+    private final int height;
     private SpaceShip spaceShip;
     private final List<Visiable> ls = new ArrayList<>();
 

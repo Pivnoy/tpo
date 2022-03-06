@@ -3,7 +3,7 @@ package part3;
 public class SpaceShip implements Visiable, Movable{
 
     private int strength;
-    private Position position;
+    private final Position position;
 
     public SpaceShip(int strength, Position position) {
         this.strength = strength;
