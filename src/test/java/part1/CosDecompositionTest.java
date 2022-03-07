@@ -2,12 +2,11 @@ package part1;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import java.io.IOException;
+
 import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -18,7 +17,7 @@ class CosDecompositionTest {
     private CosDecomposition cosDecomposition;
 
     @BeforeEach
-    void setup() throws IOException {
+    void setup(){
         this.cosDecomposition = new CosDecomposition();
     }
 
